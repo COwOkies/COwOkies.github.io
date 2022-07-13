@@ -5,11 +5,20 @@
   }
 
 body {
+    background-color: white;
+    color: black;
     font-size: 40px;
     text-align: center;
     line-height: 1.4;
-
 }
+  .dark-mode {
+    background-color: rgb(26, 26, 26);
+    color: white;
+  }
+  .light-mode {
+    background-color: white;
+    color: black;
+  }
 
 .table {
     display: table;
@@ -19,12 +28,12 @@ body {
 }
 
 .left {
-    text-align: left;
+    text-align: center;
     display: table-cell;
 }
 
 .right {
-    text-align: right;
+    text-align: center;
     display: table-cell;
 }
 @font-face {
@@ -68,3 +77,12 @@ button {
     font-family: 'lockclock';
     font-size: 20px;
 }
+
+#color{
+    display: table;
+    font-size: 30px;
+    margin-left: auto;
+    background-color: transparent;    
+    border: 0px solid transparent;
+}
+
