@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Soul Knight Character Selector</title>
+        <link rel="stylesheet" href="style2.css">
+        <script src="scripts.js"></script>
+        <script src="https://randojs.com/1.0.0.js"></script>
+        <style type="text/css">
+            body{
+        font-family: 'pixel_bold';
+                    }
+</style>
+    </head>
+
+    <body onload="showRandomSkill();showRandomChar();">
+        <h1>Soul Knight Character Selector</h1>
+        <div class="table">
+        <div class="left">
+        <b class="blocktext">Character</b>
+        <div class="results" id="myCharacter"></div>
+        <br>
+        <img src="" id="Char_Skin" height="140">
+        <br><br>
+
+        <button type="button" onclick="showRandomChar()">Reroll Char</button>
+        </div>
+        <div class="right">
+        <b class="blocktext">Skill</b>
+        <div class="results" id="mySkill"></div>
+        <br>
+        <img src="" id="Char_Skill" height="140">
+        <br><br>
+        <button type="button" onclick="showRandomSkill()">Reroll Skill</button>
+        </div>
+        </div>
+
+        <button id="terminus" type="button" onclick="showRandomChar();showRandomSkill()">Reroll Everything</button>
+    </body>
+</html>
