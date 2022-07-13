@@ -1,16 +1,19 @@
-let characters = ['Knight', 'Rogue', 'Wizard', 'Assassin', 'Alchemist', 'Engineer', 'Vampire', 'Paladin', 'Elf', 'Werewolf', 'Priest', 'Druid', 'Robot', 'Berseker', 'Necromancer', 'Officer', 'Taoist', 'Air Bender', 'Demonmancer'];
+let characters = ['Knight', 'Rogue', 'Wizard', 'Assassin', 'Alchemist', 'Engineer', 'Vampire', 'Paladin', 'Elf', 'Werewolf', 'Priest', 'Druid', 'Robot', 'Berseker', 'Necromancer', 'Officer', 'Taoist', 'Air Bender', 'Demonmancer', 'Inter-dimension Traveler', 'Element Envoy', 'The Beheaded', 'Time Traveling Ninja','Special Forces'];
 var randomChar = -1
 var randomSkill = -1
 var color = 1
+var maxvalue = 18
+var path = ("skins/"+randomChar+".png")
 
 function showRandomChar(){
     old_randomChar = randomChar
-    randomChar = rando(0, 18);
     while (randomChar == old_randomChar) {
-        randomChar = rando(0, 18);}
+        randomChar = rando(0, maxvalue);}
     if (randomChar > 16) {
         randomSkill = 0
         document.getElementById("mySkill").innerHTML = (randomSkill+1);}
+    if (randomChar == 23) {path = ("skins/23.gif")}
+    else {path = ("skins/"+randomChar+".png")}
     document.getElementById("myCharacter").innerHTML = characters[randomChar];
 
     setCharimage()
@@ -29,8 +32,8 @@ function showRandomSkill(){
     setSkillimage()
 }
 
-function setCharimage(){
-    const image_path = ("skins/"+randomChar+".png");
+function setCharimage() {
+    const image_path = path;
     const image = document.getElementById("Char_Skin");
     image.src = image_path;}
 
@@ -51,4 +54,10 @@ function changeColor() {
     document.getElementById("color").innerHTML = "☀️";}
     if (color == 0) {element.className = "light-mode";
     document.getElementById("color").innerHTML = "🌙";}
+}
+function checking() {
+if (document.querySelector('#legendary').checked == true) {
+    maxvalue = 23}
+if (document.querySelector('#legendary').checked == false) {
+    maxvalue = 18}
 }
