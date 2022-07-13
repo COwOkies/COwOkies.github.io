@@ -11,11 +11,11 @@
 </style>
     </head>
 
-    <body onload="showRandomSkill();showRandomChar();">
+    <body class="dark-mode" onload="showRandomSkill();showRandomChar();">
         <h1>Soul Knight Character Selector</h1>
         <div class="table">
         <div class="left">
-        <b class="blocktext">Character</b>
+        <b class="blocktext">Char</b>
         <div class="results" id="myCharacter"></div>
         <br>
         <img src="" id="Char_Skin" height="140">
@@ -34,5 +34,8 @@
         </div>
 
         <button id="terminus" type="button" onclick="showRandomChar();showRandomSkill()">Reroll Everything</button>
+        
+        <button id="color" onclick="switchMode()">☀️</button>
+
     </body>
 </html>
