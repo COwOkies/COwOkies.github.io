@@ -9,7 +9,7 @@
         </style>
     </head>
 
-    <body class="dark-mode" onload="showRandomSkill();showRandomChar();checking()">
+    <body class="dark-mode" onload="showRandomChar();checking();showRandomSkill();prices();">
         <h1 class="dark-mode">Soul Knight Character Selector</h1>
         <div class="table">
             <div class="left">
@@ -17,7 +17,7 @@
                 <div class="results" id="myCharacter"></div>
                 <br>
                 <img src="" id="Char_Skin" height="140">
-                <br><br>
+                <p class="priceslook" id="price">???</p>
 
                 <button class="dark-mode-button" id="button" type="button" onclick="showRandomChar()">Reroll Char</button>
             </div>
@@ -26,7 +26,8 @@
             <div class="results" id="mySkill"></div>
                 <br>
                 <img src="" id="Char_Skill" height="140">
-                <br><br>
+                <p class="priceslook" id="priceskill">???</p>
+
                 <button class="dark-mode-button" id="button" type="button" onclick="showRandomSkill()">Reroll Skill</button>
             </div>
         </div>
@@ -40,6 +41,10 @@
         <div class="legendaries2">
             <p id="legendary3" class="results">only legendary characters</p>
             <input type="checkbox" onclick="onlylegend()" id="legendary4" name="legendary">
+        </div>
+        <div class="showprices">
+            <p id="price1" class="results">show prices</p>
+            <input id="price2" type="checkbox" onclick="prices()">
         </div>
         <button id="color" onclick="switchMode()">☀️</button>
     </body>

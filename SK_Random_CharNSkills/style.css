@@ -11,14 +11,8 @@ body {
     text-align: center;
     line-height: 1;
 }
-  .dark-mode {
-    background-color: rgb(26, 26, 26);
-    color: white;
-  }
-  .light-mode {
-    background-color: white;
-    color: black;
-  }
+  .dark-mode {background-color: rgb(26, 26, 26);color: white;}
+  .light-mode {background-color: white;color: black;}
 
   .dark-mode-button {
     background-color: rgb(26, 26, 26);
@@ -34,31 +28,23 @@ body {
     border-spacing: 20px;
 }
 
-.left {
-    text-align: center;
-    display: table-cell;
-}
+.left {text-align: center;display: table-cell;}
 
-.right {
-    text-align: center;
-    display: table-cell;
-}
+.right {text-align: center;display: table-cell;}
+
 @font-face {
     font-family: 'pixel_bold';
     src: url('pixel_bold.woff2') format('woff2'),
          url('pixel_bold.woff') format('woff');
     font-weight: normal;
-    font-style: normal;
+    font-style: normal;}
 
-}
 @font-face {
     font-family: 'lockclock';
     src: url('lockclock.woff2') format('woff2'),
          url('lockclock.woff') format('woff');
     font-weight: normal;
-    font-style: normal;
-
-}
+    font-style: normal;}
 
 h1 {
     border: 2px solid white;
@@ -67,10 +53,7 @@ h1 {
     background-color: white;
 }
   
-b {
-    text-decoration: underline;
-    color: red;
-}
+b {text-decoration: underline;color: red;}
 
 button {
     font-family: 'pixel_bold';
@@ -81,10 +64,7 @@ button {
     border: 2px solid black;
   }
 
-.results{
-    font-family: 'lockclock';
-    font-size: 20px;
-}
+.results{font-family: 'lockclock';font-size: 20px;}
 
 #color{
     display: table;
@@ -99,15 +79,9 @@ button {
     margin-left: auto;
     margin-right: auto;
 }
- #legendary{
-    display: table-cell;
-    text-align: left;
-}
+ #legendary{display: table-cell;text-align: left;}
 
-#legendary2{
-    display: table-cell;
-    text-align: right;
-}
+#legendary2{display: table-cell;text-align: right;}
 
 .legendaries2{
     display: table;
@@ -115,12 +89,18 @@ button {
     margin-right: auto;
 }
 
-#legendary3{
-    display: table-cell;
-    text-align: left;
+#legendary3{display: table-cell;text-align: left;}
+
+#legendary2{display: table-cell;text-align: right;}
+
+.showprices{
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#legendary2{
-    display: table-cell;
-    text-align: right;
-}
+#price1{display: table-cell;text-align: left;}
+
+#price2{display: table-cell;text-align: right;}
+
+.priceslook{font-family: 'lockclock';font-size: 20px;color:#34a1eb;}
