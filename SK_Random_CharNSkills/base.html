@@ -10,7 +10,7 @@
     </head>
 
     <body class="dark-mode" onload="showRandomSkill();showRandomChar();checking()">
-        <h1>Soul Knight Character Selector</h1>
+        <h1 class="dark-mode">Soul Knight Character Selector</h1>
         <div class="table">
             <div class="left">
                 <b class="blocktext">Char</b>
@@ -19,7 +19,7 @@
                 <img src="" id="Char_Skin" height="140">
                 <br><br>
 
-                <button type="button" onclick="showRandomChar()">Reroll Char</button>
+                <button class="dark-mode-button" id="button" type="button" onclick="showRandomChar()">Reroll Char</button>
             </div>
         <div class="right">
             <b class="blocktext">Skill</b>
@@ -27,11 +27,11 @@
                 <br>
                 <img src="" id="Char_Skill" height="140">
                 <br><br>
-                <button type="button" onclick="showRandomSkill()">Reroll Skill</button>
+                <button class="dark-mode-button" id="button" type="button" onclick="showRandomSkill()">Reroll Skill</button>
             </div>
         </div>
 
-        <button id="terminus" type="button" onclick="showRandomChar();showRandomSkill()">Reroll Everything</button>
+        <button class="dark-mode-button" id="terminus" type="button" onclick="showRandomChar();showRandomSkill()">Reroll Everything</button>
         <br><br>
         <div class="legendaries">
             <p id="legendary2" class="results">add legendary characters</p>

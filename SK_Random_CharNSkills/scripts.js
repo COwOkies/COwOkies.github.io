@@ -6,6 +6,7 @@ var minvalue = 0
 var maxvalue = 18
 var path = ("skins/"+randomChar+".png")
 
+
 function showRandomChar(){
     old_randomChar = randomChar
     while (randomChar == old_randomChar) {
@@ -55,6 +56,9 @@ function changeColor() {
     document.getElementById("color").innerHTML = "☀️";}
     if (color == 0) {element.className = "light-mode";
     document.getElementById("color").innerHTML = "🌙";}
+    var element = getElementById("button")
+    if (color == 1) {element.className = "dark-mode-button";}
+    if (color == 0) {element.className = "light-mode-button";}
 }
 function checking() {
     if (document.querySelector('#legendary').checked == true) {

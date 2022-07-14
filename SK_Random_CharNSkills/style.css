@@ -20,6 +20,13 @@ body {
     color: black;
   }
 
+  .dark-mode-button {
+    background-color: rgb(26, 26, 26);
+    color: white;
+    border: 2px solid white;
+  }
+
+
 .table {
     display: table;
     margin-left: auto;
@@ -54,9 +61,10 @@ body {
 }
 
 h1 {
+    border: 2px solid white;
     font-size: 50px;
-    color: white;
-    background-color: black;
+    color: black;
+    background-color: white;
 }
   
 b {
