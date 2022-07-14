@@ -57,25 +57,25 @@ function changeColor() {
     document.getElementById("color").innerHTML = "🌙";}
 }
 function checking() {
-if (document.querySelector('#legendary').checked == true) {
-    maxvalue = 23;
-    document.querySelector('#legendary3').style.visibility = "visible";
-    document.querySelector('#legendary4').style.visibility = "visible";
-}
-if (document.querySelector('#legendary').checked == false) {
-    maxvalue = 18;
-    minvalue = 0
-    document.querySelector('#legendary4').checked = false;
-    document.querySelector('#legendary3').style.visibility = "hidden";
-    document.querySelector('#legendary4').style.visibility = "hidden";
-    showRandomChar()}
+    if (document.querySelector('#legendary').checked == true) {
+        maxvalue = 23;
+        document.querySelector('#legendary3').style.visibility = "visible";
+        document.querySelector('#legendary4').style.visibility = "visible";
+    }
+    if (document.querySelector('#legendary').checked == false) {
+        maxvalue = 18;
+        minvalue = 0
+        document.querySelector('#legendary4').checked = false;
+        document.querySelector('#legendary3').style.visibility = "hidden";
+        document.querySelector('#legendary4').style.visibility = "hidden";
+        showRandomChar()}
 }
 
 function onlylegend() {
-    if (document.querySelector('#legendary').checked == true) {
-        minvalue = 19
+    if (document.querySelector('#legendary4').checked == true) {
+        minvalue = 19;
         showRandomChar()}
-    if (document.querySelector('#legendary').checked == false) {
-        minvalue = 0
+    if (document.querySelector('#legendary4').checked == false) {
+        minvalue = 0;
     }
     }
