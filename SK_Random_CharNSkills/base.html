@@ -5,39 +5,42 @@
         <script src="scripts.js"></script>
         <script src="https://randojs.com/1.0.0.js"></script>
         <style type="text/css">
-            body{
-        font-family: 'pixel_bold';
-                    }
-</style>
+            body{font-family: 'pixel_bold';}
+        </style>
     </head>
 
-    <body class="dark-mode" onload="showRandomSkill();showRandomChar();">
+    <body class="dark-mode" onload="showRandomSkill();showRandomChar();checking()">
         <h1>Soul Knight Character Selector</h1>
         <div class="table">
-        <div class="left">
-        <b class="blocktext">Char</b>
-        <div class="results" id="myCharacter"></div>
-        <br>
-        <img src="" id="Char_Skin" height="140">
-        <br><br>
+            <div class="left">
+                <b class="blocktext">Char</b>
+                <div class="results" id="myCharacter"></div>
+                <br>
+                <img src="" id="Char_Skin" height="140">
+                <br><br>
 
-        <button type="button" onclick="showRandomChar()">Reroll Char</button>
-        </div>
+                <button type="button" onclick="showRandomChar()">Reroll Char</button>
+            </div>
         <div class="right">
-        <b class="blocktext">Skill</b>
-        <div class="results" id="mySkill"></div>
-        <br>
-        <img src="" id="Char_Skill" height="140">
-        <br><br>
-        <button type="button" onclick="showRandomSkill()">Reroll Skill</button>
-        </div>
+            <b class="blocktext">Skill</b>
+            <div class="results" id="mySkill"></div>
+                <br>
+                <img src="" id="Char_Skill" height="140">
+                <br><br>
+                <button type="button" onclick="showRandomSkill()">Reroll Skill</button>
+            </div>
         </div>
 
         <button id="terminus" type="button" onclick="showRandomChar();showRandomSkill()">Reroll Everything</button>
-        
-        <p class="results">add legendary characters</p>
-        <input type="checkbox" onclick="checking()" id="legendary" name="legendary">
+        <br><br>
+        <div class="legendaries">
+            <p id="legendary2" class="results">add legendary characters</p>
+            <input type="checkbox" onclick="checking()" id="legendary" name="legendary">
+        </div>
+        <div class="legendaries2">
+            <p id="legendary3" class="results">only legendary characters</p>
+            <input type="checkbox" onclick="onlylegend()" id="legendary4" name="legendary">
+        </div>
         <button id="color" onclick="switchMode()">☀️</button>
-
     </body>
 </html>
