@@ -15,7 +15,11 @@ function showRandomChar(){
         randomChar = rando(minvalue, maxvalue);}
     if (randomChar > 16) {
         randomSkill = 0
+        document.getElementById("buttontohide").style.color = 'gray';
+        document.getElementById("buttontohide").style.borderBlockColor = 'gray';
         document.getElementById("mySkill").innerHTML = (randomSkill+1);}
+    else {document.getElementById("buttontohide").style.color = 'white';
+    document.getElementById("buttontohide").style.borderBlockColor = 'white';}
     if (randomChar == 23) {path = ("skins/23.gif")}
     else {path = ("skins/"+randomChar+".png")}
     document.getElementById("myCharacter").innerHTML = characters[randomChar];
