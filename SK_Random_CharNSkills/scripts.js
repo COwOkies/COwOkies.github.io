@@ -22,7 +22,7 @@ function showRandomChar(){
         document.getElementById("buttontohide").style.borderBlockColor = 'gray';}
     else {document.getElementById("buttontohide").style.color = 'white';
     document.getElementById("buttontohide").style.borderBlockColor = 'white';}
-    if (f2p == true) {
+    if ((f2p == 1) || (f2p == 2)) {
         while (skillmode[randomChar][randomSkill] == 1) {randomSkill = rando(0, 2);}
         while (charmode[randomChar] == 1) {randomChar = rando(minvalue, maxvalue);}}
     if (randomChar == 23) {path = ("skins/23.gif")}
@@ -43,7 +43,7 @@ function showRandomSkill(){
         while (randomSkill == old_randomSkill) {
             randomSkill = rando(0, 2); }     
     }
-    if (f2p == true) {
+    if ((f2p == 1) || (f2p == 3)) {
         while (skillmode[randomChar][randomSkill] == 1) {randomSkill = rando(0, 2); }}
     document.getElementById("mySkill").innerHTML = (randomSkill+1);
     setSkillimage()
@@ -111,11 +111,32 @@ function prices() {
 
 function enablef2p() {
     if (document.querySelector('#f2p2').checked == true) {
-        f2p = true
+        f2p = 1
+        document.querySelector('#f2p3').disabled = true;
+        document.querySelector('#f2p4').disabled = true;
         showRandomSkill()
         showRandomChar()
     }
-    if (document.querySelector('#f2p2').checked == false) {
+    if (document.querySelector('#f2p3').checked == true) {
+        f2p = 2
+        document.querySelector('#f2p2').disabled = true;
+        document.querySelector('#f2p4').disabled = true;
+        showRandomSkill()
+        showRandomChar()
+    }
+    if (document.querySelector('#f2p4').checked == true) {
+        f2p = 3
+        document.querySelector('#f2p2').disabled = true;
+        document.querySelector('#f2p3').disabled = true;
+        showRandomSkill()
+        showRandomChar()
+    }
+    if ((document.querySelector('#f2p2').checked == false) && (document.querySelector('#f2p3').checked == false) && (document.querySelector('#f2p4').checked == false)) {
         f2p = false
+        document.querySelector('#f2p2').disabled = false;
+        document.querySelector('#f2p3').disabled = false;
+        document.querySelector('#f2p4').disabled = false;
+        showRandomSkill()
+        showRandomChar()
     }
 }
