@@ -47,7 +47,8 @@ button {
     border: 2px solid white;
     font-family: 'pixel_bold';
     font-size: 25px;
-    border-radius: 8px;}
+    border-radius: 8px;
+    cursor:pointer;}
 
 #buttonChar {
     color: orange;
@@ -55,35 +56,39 @@ button {
     font-size: 35px;}
 
 
-.legendaries{
+.toggle_legendaries{
     display: table;
     margin-left: auto;
     margin-right: auto;
     border-spacing: 10px;}
-#legendary{display: table-cell;text-align: left;}
-#legendary2{display: table-cell;text-align: right;}
+#p_legendary{display: table-cell;text-align: left;}
+#c_legendary{display: table-cell;text-align: right;}
 
-.legendaries2{
+.only_legendaries{
     display: table;
     margin-left: auto;
     margin-right: auto;}
-#legendary3{display: table-cell;text-align: left;}
-#legendary2{display: table-cell;text-align: right;}
+#p_onlylegendary{display: table-cell;text-align: left;}
+#c_onlylegendary{display: table-cell;text-align: right;}
 
 .showprices{
     display: table;
     margin-left: auto;
     margin-right: auto;
     border-spacing: 10px;}
-#price1{display: table-cell;text-align: left;}
-#price2{display: table-cell;text-align: right;}
+#p_prices{display: table-cell;text-align: left;}
+#c_prices{display: table-cell;text-align: right;}
 
 .choosef2p{
     display: table;
     margin-left: auto;
-    margin-right: auto;}
-#f2p1{display: table-cell;text-align: left;vertical-align: middle;}
-.f2palign{display: table-cell;text-align: right;}
+    margin-right: auto;
+    border-spacing: 10px;
+    border-radius: 8px;
+    border: 1px solid gray;}
+
+#p_f2p{display: table-cell;text-align: left;vertical-align: middle;}
+.f2palign{display: table-cell;text-align: left;}
 
 .priceslook{font-family: 'lockclock';font-size: 20px;color:#34a1eb;}
 

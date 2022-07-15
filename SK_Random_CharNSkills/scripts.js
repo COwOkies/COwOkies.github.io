@@ -1,142 +1,147 @@
+//characters list
 let characters = ['Knight', 'Rogue', 'Wizard', 'Assassin', 'Alchemist', 'Engineer', 'Vampire', 'Paladin', 'Elf', 'Werewolf', 'Priest', 'Druid', 'Robot', 'Berseker', 'Necromancer', 'Officer', 'Taoist', 'Air Bender', 'Demonmancer', 'Inter-dimension Traveler', 'Element Envoy', 'The Beheaded', 'Time Traveling Ninja','Special Forces'];
 let charprice = ['Free Char','f2p (2000)','f2p (3000)','f2p (4000)','f2p (5000)','Paid ($0.99)','Paid ($0.99)','Paid ($0.99)','f2p (12000)','Paid ($1.99)','f2p (12000)','Paid ($1.99)','f2p (IG Materials)','Paid ($1.99)','Paid ($1.99)','f2p (achievement)','Paid ($1.99)','f2p (achievement)','Paid ($1.99)','Paid (Priest+Necromancer)','f2p (Wizard+Elf)','f2p (IG Materials)','Paid (Assassin+Engineer)','f2p (Officer+Knight)'];
-let skillprice =[['Free Skill','f2p (5000)','f2p (6000)'],['Free Skill','Paid ($1.99)','Paid ($1.99)'],['Free Skill','f2p (6000)','Paid ($1.99)'],['Free Skill','f2p (7000)','f2p (7000)'],['Free Skill','f2p (8000)','Paid ($1.99)'],['Free Skill','Paid ($1.99)','Paid ($1.99)'],['Free Skill','Paid ($1.99)','f2p (10000)'],['Free Skill','Paid ($1.99)','f2p (Design Table)'],['Free Skill','Paid ($1.99)','f2p (10000)'],['Free Skill','f2p (12000)','Paid ($1.99)'],['Free Skill','f2p (Design Table)','Paid ($1.99)'],['Free Skill','f2p (Design Table)','f2p (10000)'],['Free Skill','Paid ($1.99)','f2p (8000)'],['Free Skill','Paid ($1.99)','f2p (Design Table)'],['Free Skill','Paid ($1.99)','Paid ($1.99)'],['Free Skill','f2p (8000)','Paid ($1.99)'],['Free Skill','Paid ($1.99)','f2p (10000)'],['Free Skill'],['Free Skill'],['Free Skill'],['Free Skill'],['Free Skill'],['Free Skill'],['Free Skill']]
 let charmode = [0,0,0,0,0,1,1,1,0,1,0,1,0,1,1,0,1,0,1,1,0,0,1,0];
+
+//skills list
+let skillprice =[['Free Skill','f2p (5000)','f2p (6000)'],['Free Skill','Paid ($1.99)','Paid ($1.99)'],['Free Skill','f2p (6000)','Paid ($1.99)'],['Free Skill','f2p (7000)','f2p (7000)'],['Free Skill','f2p (8000)','Paid ($1.99)'],['Free Skill','Paid ($1.99)','Paid ($1.99)'],['Free Skill','Paid ($1.99)','f2p (10000)'],['Free Skill','Paid ($1.99)','f2p (Design Table)'],['Free Skill','Paid ($1.99)','f2p (10000)'],['Free Skill','f2p (12000)','Paid ($1.99)'],['Free Skill','f2p (Design Table)','Paid ($1.99)'],['Free Skill','f2p (Design Table)','f2p (10000)'],['Free Skill','Paid ($1.99)','f2p (8000)'],['Free Skill','Paid ($1.99)','f2p (Design Table)'],['Free Skill','Paid ($1.99)','Paid ($1.99)'],['Free Skill','f2p (8000)','Paid ($1.99)'],['Free Skill','Paid ($1.99)','f2p (10000)'],['Free Skill'],['Free Skill'],['Free Skill'],['Free Skill'],['Free Skill'],['Free Skill'],['Free Skill']]
 let skillmode =[[0,0,0],[0,1,1],[0,0,1],[0,0,0],[0,0,1],[0,1,1],[0,1,0],[0,1,0],[0,1,0],[0,0,1],[0,0,1],[0,0,0],[0,1,0],[0,1,0],[0,1,1],[0,0,1],[0,1,0],[0],[0],[0],[0],[0],[0],[0]]
-var randomChar = -1
-var randomSkill = -1
-var color = 1
-var minvalue = 0
-var maxvalue = 18
+
+//setup some important var
+var [randomChar,randomSkill,color] = [1,1,1]
+var [minvalue,maxvalue] = [0,18]
+var path = (".png")
 var f2p = false
-var path = ("skins/"+randomChar+".png")
 
 
-function showRandomChar(){
+//Return and display a random Character
+function getRandomChar(){
     old_randomChar = randomChar
-    while (randomChar == old_randomChar) {
-        randomChar = rando(minvalue, maxvalue);}
+    while (randomChar == old_randomChar) {randomChar = rando(minvalue, maxvalue);}
     if (randomChar > 16) {
         randomSkill = 0
-        document.getElementById("buttontohide").style.color = 'gray';
-        document.getElementById("buttontohide").style.borderBlockColor = 'gray';}
-    else {document.getElementById("buttontohide").style.color = 'white';
-    document.getElementById("buttontohide").style.borderBlockColor = 'white';}
+        button_for_skill = document.getElementById("button_for_skill")
+        button_for_skill.style.cssText = "color: gray; border: 2px solid gray; cursor: not-allowed;";}
+    else {button_for_skill.style.cssText = "color: white; border: 2px solid white; cursor: pointer;";}
+        
     if ((f2p == 1) || (f2p == 2)) {
         while (skillmode[randomChar][randomSkill] == 1) {randomSkill = rando(0, 2);}
         while (charmode[randomChar] == 1) {randomChar = rando(minvalue, maxvalue);}}
-    if (randomChar == 23) {path = ("skins/23.gif")}
-    else {path = ("skins/"+randomChar+".png")}
-    document.getElementById("myCharacter").innerHTML = characters[randomChar];
-    document.getElementById("price").innerHTML = charprice[randomChar];
-    document.getElementById("mySkill").innerHTML = (randomSkill+1);
-    document.getElementById("priceskill").innerHTML = skillprice[randomChar][randomSkill];
-
-    setCharimage()
-    setSkillimage()
+    
+    if (randomChar == 23) {path = (".gif")}
+    else {path = (".png")}
+    updateAll()
 }
 
-function showRandomSkill(){
+//Return and display a random Skill
+function getRandomSkill(){
     old_randomSkill = randomSkill
     if (randomChar > 16) {randomSkill = 0}
     else {randomSkill = rando(0, 2);
         while (randomSkill == old_randomSkill) {
-            randomSkill = rando(0, 2); }     
-    }
+            randomSkill = rando(0, 2); }}
+
     if ((f2p == 1) || (f2p == 3)) {
         while (skillmode[randomChar][randomSkill] == 1) {randomSkill = rando(0, 2); }}
-    document.getElementById("mySkill").innerHTML = (randomSkill+1);
-    setSkillimage()
-    document.getElementById("priceskill").innerHTML = skillprice[randomChar][randomSkill];
+    updateAll();
 }
 
+//Display the ".png" of the actual Char/Skill
+function getImages() {
+    const image_Char_Skin_path = "skins/"+randomChar+path;
+    const image_Char_Skill_path2 = ("skills/"+randomChar+"-"+randomSkill+".png");
 
-function setCharimage() {
-    const image_path = path;
-    const image = document.getElementById("Char_Skin");
-    image.src = image_path;}
+    const image_Char_Skin = document.getElementById("Char_Skin");
+    const image_Char_Skill = document.getElementById("Char_Skill");
 
-function setSkillimage(){
-    const image_path2 = ("skills/"+randomChar+"-"+randomSkill+".png");
-    const image = document.getElementById("Char_Skill");
-    image.src = image_path2;}
+    image_Char_Skin.src = image_Char_Skin_path;
+    image_Char_Skill.src = image_Char_Skill_path2;}
 
+//cycle between dark-mode/light-mode (not finished yet)
 function switchMode() {
     color = color + 1
     if (color > 1) {color = 0;}
-    changeColor()
+
+    var body = document.body;
+    if (color == 1) {
+    body.className = "dark-mode";
+    body.getElementById("color").innerHTML = "☀️";}
+
+    else {body.className = "light-mode";
+    body.getElementById("color").innerHTML = "🌙";}
 }
 
-function changeColor() {
-    var element = document.body;
-    if (color == 1) {element.className = "dark-mode";
-    document.getElementById("color").innerHTML = "☀️";}
-    if (color == 0) {element.className = "light-mode";
-    document.getElementById("color").innerHTML = "🌙";}
-}
-function checking() {
-    if (document.querySelector('#legendary').checked == true) {
-        maxvalue = 23;
-        document.querySelector('#legendary3').style.visibility = "visible";
-        document.querySelector('#legendary4').style.visibility = "visible";
-    }
-    if (document.querySelector('#legendary').checked == false) {
-        maxvalue = 18;
-        minvalue = 0
-        document.querySelector('#legendary4').checked = false;
-        document.querySelector('#legendary3').style.visibility = "hidden";
-        document.querySelector('#legendary4').style.visibility = "hidden";
-        showRandomChar()}
+//enable/disable legendary characters
+function enable_legend() {
+    if (document.querySelector('#c_legendary').checked == true) {
+        document.querySelector('.only_legendaries').style.visibility = "visible";
+        maxvalue = 23;}
+
+    else {
+        [maxvalue,minvalue] = [18,0];
+        document.querySelector('.only_legendaries').style.visibility = "hidden";
+        document.querySelector('#c_onlylegendary').checked = false;
+
+        getRandomChar()}
 }
 
+//enable/disable the other characters (than legendary)
 function onlylegend() {
-    if (document.querySelector('#legendary4').checked == true) {
+    if (document.querySelector('#c_onlylegendary').checked == true) {
         minvalue = 19;
-        showRandomChar()}
-    if (document.querySelector('#legendary4').checked == false) {
-        minvalue = 0;
-    }
+        getRandomChar()}
+
+    else {minvalue = 0;}
 }
 
-function prices() {
-    if (document.querySelector('#price2').checked == true) {
-        document.querySelector('#price').style.visibility = "visible";
-        document.querySelector('#priceskill').style.visibility = "visible";
-    }
-    if (document.querySelector('#price2').checked == false) {
-        document.querySelector('#price').style.visibility = "hidden";
-        document.querySelector('#priceskill').style.visibility = "hidden";
-    }
+//show/hide prices
+function toggleprices() {
+    if (document.querySelector('#c_prices').checked == true) {
+        document.querySelector('#char_price').style.visibility = "visible";
+        document.querySelector('#skill_price').style.visibility = "visible";}
+
+    else {
+        document.querySelector('#char_price').style.visibility = "hidden";
+        document.querySelector('#skill_price').style.visibility = "hidden";}
 }
 
+//enable/disable f2p and choose mode 
 function enablef2p() {
-    if (document.querySelector('#f2p2').checked == true) {
-        f2p = 1
-        document.querySelector('#f2p3').disabled = true;
-        document.querySelector('#f2p4').disabled = true;
-        showRandomSkill()
-        showRandomChar()
-    }
-    if (document.querySelector('#f2p3').checked == true) {
-        f2p = 2
-        document.querySelector('#f2p2').disabled = true;
-        document.querySelector('#f2p4').disabled = true;
-        showRandomSkill()
-        showRandomChar()
-    }
-    if (document.querySelector('#f2p4').checked == true) {
-        f2p = 3
-        document.querySelector('#f2p2').disabled = true;
-        document.querySelector('#f2p3').disabled = true;
-        showRandomSkill()
-        showRandomChar()
-    }
-    if ((document.querySelector('#f2p2').checked == false) && (document.querySelector('#f2p3').checked == false) && (document.querySelector('#f2p4').checked == false)) {
+    var c_f2p_all = document.querySelector('#c_f2p_all')
+    var c_f2p_char = document.querySelector('#c_f2p_char')
+    var c_f2p_skill = document.querySelector('#c_f2p_skill')
+
+    if (c_f2p_all.checked == true) {
+        f2p = 1;
+        c_f2p_char.disabled = true;
+        c_f2p_skill.disabled = true;}
+
+    else if (c_f2p_char.checked == true) {
+        f2p = 2;
+        c_f2p_all.disabled = true;
+        c_f2p_skill.disabled = true;}
+
+    else if (c_f2p_skill.checked == true) {
+        f2p = 3;
+        c_f2p_all.disabled = true;
+        c_f2p_char.disabled = true;}
+
+    else {
         f2p = false
-        document.querySelector('#f2p2').disabled = false;
-        document.querySelector('#f2p3').disabled = false;
-        document.querySelector('#f2p4').disabled = false;
-        showRandomSkill()
-        showRandomChar()
-    }
+        c_f2p_all.disabled = false;
+        c_f2p_char.disabled = false;
+        c_f2p_skill.disabled = false;}
+
+    getRandomSkill()
+    getRandomChar()
+}
+
+//update the look of the page
+function updateAll() {
+    document.getElementById("myCharacter").innerHTML = characters[randomChar];
+    document.getElementById("char_price").innerHTML = charprice[randomChar];
+    document.getElementById("skill_price").innerHTML = skillprice[randomChar][randomSkill];
+    document.getElementById("mySkill").innerHTML = (randomSkill+1);
+    
+    getImages()
 }
