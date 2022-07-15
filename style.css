@@ -1,0 +1,103 @@
+body {
+    font-family: 'pixel_bold';
+    background-color: white;
+    color: black;
+    font-size: 40px;
+    text-align: center;
+    line-height: 1;}
+.dark-mode {background-color: rgb(26, 26, 26);color: white;}
+.light-mode {background-color: white;color: black;}
+    
+@font-face {
+    font-family: 'pixel_bold';
+    src: url('pixel_bold.woff2') format('woff2'),
+         url('pixel_bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;}
+
+@font-face {
+    font-family: 'lockclock';
+    src: url('lockclock.woff2') format('woff2'),
+         url('lockclock.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;}
+
+h1 {
+    border: 2px solid rgb(255, 255, 255);
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(18, 18, 18);
+    border-radius: 8px;}
+
+.table {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    border-spacing: 20px;}
+.left {text-align: center;display: table-cell;}
+.right {text-align: center;display: table-cell;}
+
+b {text-decoration: underline;color: red;}
+
+.results{font-family: 'lockclock';font-size: 20px;}
+
+button {
+    background-color: rgb(26, 26, 26);
+    color: white;
+    border: 2px solid white;
+    font-family: 'pixel_bold';
+    font-size: 25px;
+    border-radius: 8px;}
+
+#buttonChar {
+    color: orange;
+    border: 2px solid orange;
+    font-size: 35px;}
+
+
+.legendaries{
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    border-spacing: 10px;}
+#legendary{display: table-cell;text-align: left;}
+#legendary2{display: table-cell;text-align: right;}
+
+.legendaries2{
+    display: table;
+    margin-left: auto;
+    margin-right: auto;}
+#legendary3{display: table-cell;text-align: left;}
+#legendary2{display: table-cell;text-align: right;}
+
+.showprices{
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    border-spacing: 10px;}
+#price1{display: table-cell;text-align: left;}
+#price2{display: table-cell;text-align: right;}
+
+.choosef2p{
+    display: table;
+    margin-left: auto;
+    margin-right: auto;}
+#f2p1{display: table-cell;text-align: left;}
+.f2palign{display: table-cell;text-align: right;}
+
+.priceslook{font-family: 'lockclock';font-size: 20px;color:#34a1eb;}
+
+#color{
+    font-size: 30px;
+    background-color: transparent;    
+    border: 0px solid transparent;}
+
+#version{
+    font-size: 20px;
+    margin-right: auto;}
+
+#HASH {
+    display: flex;
+    justify-content: space-between;}
+
+label{font-family: 'lockclock';font-size: 20px;}
