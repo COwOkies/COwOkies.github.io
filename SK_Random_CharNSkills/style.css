@@ -58,7 +58,8 @@ button {
 .legendaries{
     display: table;
     margin-left: auto;
-    margin-right: auto;}
+    margin-right: auto;
+    border-spacing: 10px;}
 #legendary{display: table-cell;text-align: left;}
 #legendary2{display: table-cell;text-align: right;}
 
@@ -72,9 +73,17 @@ button {
 .showprices{
     display: table;
     margin-left: auto;
-    margin-right: auto;}
+    margin-right: auto;
+    border-spacing: 10px;}
 #price1{display: table-cell;text-align: left;}
 #price2{display: table-cell;text-align: right;}
+
+.choosef2p{
+    display: table;
+    margin-left: auto;
+    margin-right: auto;}
+#f2p1{display: table-cell;text-align: left;}
+#f2p2{display: table-cell;text-align: right;}
 
 .priceslook{font-family: 'lockclock';font-size: 20px;color:#34a1eb;}
 
