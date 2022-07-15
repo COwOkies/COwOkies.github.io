@@ -73,7 +73,7 @@ function switchMode() {
 
 //enable/disable legendary characters
 function enable_legend() {
-    if (document.querySelector('#c_legendary').checked == true) {
+    if (document.querySelector('#c_legendary').checked) {
         document.querySelector('.only_legendaries').style.visibility = "visible";
         maxvalue = 23;}
 
@@ -87,7 +87,7 @@ function enable_legend() {
 
 //enable/disable the other characters (than legendary)
 function onlylegend() {
-    if (document.querySelector('#c_onlylegendary').checked == true) {
+    if (document.querySelector('#c_onlylegendary').checked) {
         minvalue = 19;
         getRandomChar()}
 
@@ -96,7 +96,7 @@ function onlylegend() {
 
 //show/hide prices
 function toggleprices() {
-    if (document.querySelector('#c_prices').checked == true) {
+    if (document.querySelector('#c_prices').checked) {
         document.querySelector('#char_price').style.visibility = "visible";
         document.querySelector('#skill_price').style.visibility = "visible";}
 
@@ -111,17 +111,17 @@ function enablef2p() {
     var c_f2p_char = document.querySelector('#c_f2p_char')
     var c_f2p_skill = document.querySelector('#c_f2p_skill')
 
-    if (c_f2p_all.checked == true) {
+    if (c_f2p_all.checked) {
         f2p = 1;
         c_f2p_char.disabled = true;
         c_f2p_skill.disabled = true;}
 
-    else if (c_f2p_char.checked == true) {
+    else if (c_f2p_char.checked) {
         f2p = 2;
         c_f2p_all.disabled = true;
         c_f2p_skill.disabled = true;}
 
-    else if (c_f2p_skill.checked == true) {
+    else if (c_f2p_skill.checked) {
         f2p = 3;
         c_f2p_all.disabled = true;
         c_f2p_char.disabled = true;}
