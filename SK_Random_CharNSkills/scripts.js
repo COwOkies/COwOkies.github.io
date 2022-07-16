@@ -114,26 +114,30 @@ function enablef2p() {
     if (c_f2p_all.checked) {
         f2p = 1;
         c_f2p_char.disabled = true;
-        c_f2p_skill.disabled = true;}
+        c_f2p_skill.disabled = true;
+        getRandomSkill()
+        getRandomChar()}
 
     else if (c_f2p_char.checked) {
         f2p = 2;
         c_f2p_all.disabled = true;
-        c_f2p_skill.disabled = true;}
+        c_f2p_skill.disabled = true;
+        getRandomChar()}
 
     else if (c_f2p_skill.checked) {
         f2p = 3;
         c_f2p_all.disabled = true;
-        c_f2p_char.disabled = true;}
+        c_f2p_char.disabled = true;
+        getRandomSkill()}
 
     else {
         f2p = false
         c_f2p_all.disabled = false;
         c_f2p_char.disabled = false;
-        c_f2p_skill.disabled = false;}
+        c_f2p_skill.disabled = false;
+        getRandomSkill()
+        getRandomChar()}
 
-    getRandomSkill()
-    getRandomChar()
 }
 
 //update the look of the page
