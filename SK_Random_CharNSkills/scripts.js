@@ -65,10 +65,10 @@ function switchMode() {
     var body = document.body;
     if (color == 1) {
     body.className = "dark-mode";
-    body.getElementById("color").innerHTML = "☀️";}
+    document.getElementById("color").innerHTML = "☀️";}
 
     else {body.className = "light-mode";
-    body.getElementById("color").innerHTML = "🌙";}
+    document.getElementById("color").innerHTML = "🌙";}
 }
 
 //enable/disable legendary characters
