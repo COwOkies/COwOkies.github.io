@@ -41,20 +41,8 @@ b {text-decoration: underline;color: red;}
 
 .results{font-family: 'lockclock';font-size: 20px;}
 
-button {
-    background-color: rgb(26, 26, 26);
-    color: white;
-    border: 2px solid white;
-    font-family: 'pixel_bold';
-    font-size: 25px;
-    border-radius: 8px;
-    cursor:pointer;}
-
-#buttonChar {
-    color: orange;
-    border: 2px solid orange;
-    font-size: 35px;}
-
+button {cursor:pointer;}
+input {cursor:pointer;}
 
 .toggle_legendaries{
     display: table;

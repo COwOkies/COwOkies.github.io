@@ -3,7 +3,7 @@
         <title>Soul Knight Character Selector</title>
         <link rel="stylesheet" href="style.css">
         <script src="scripts.js"></script>
-        <meta name="viewport" content="width=500", initial-scale=0.5">
+        <meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, user-scalable=no">
         <script src="https://randojs.com/1.0.0.js"></script>
     </head>
 
@@ -18,7 +18,7 @@
 
                     <img src="" id="Char_Skin" height="140">
                     <p class="priceslook" id="char_price">???</p>
-                    <button type="button" onclick="getRandomChar()">Reroll Char</button>
+                    <INPUT type="image" src="style/button_char.png" value="" width="180" onclick="getRandomChar()">
                 </div>
                 <div class="right">
                 <b class="blocktext">Skill</b>
@@ -27,11 +27,10 @@
                         <br>
                         <img src="" id="Char_Skill" height="140">
                         <p class="priceslook" id="skill_price">???</p>
-                        <button id="button_for_skill" type="button" onclick="getRandomSkill()">Reroll Skill</button>
+                        <INPUT id="button_for_skill" type="image" src="style/button_skill.png" value="" width="180" onclick="getRandomSkill()">
                     </div>
                 </div>
-                <button class="dark-mode-button" id="buttonChar" type="button" onclick="getRandomChar();getRandomSkill()">Reroll Everything</button>
-                
+                <INPUT type="image" src="style/button_all.png" value="" width="220" onclick="getRandomChar();getRandomSkill()">
                 
                 <br><br>
                 <div class="toggle_legendaries">

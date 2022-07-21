@@ -21,8 +21,10 @@ function getRandomChar(){
     if (randomChar > 16) {
         randomSkill = 0
         button_for_skill = document.getElementById("button_for_skill")
-        button_for_skill.style.cssText = "color: gray; border: 2px solid gray; cursor: not-allowed;";}
-    else {button_for_skill.style.cssText = "color: white; border: 2px solid white; cursor: pointer;";}
+        button_for_skill.src="style/button_skill_x.png"
+        button_for_skill.style.cssText = "cursor: not-allowed;";}
+    else {button_for_skill.src="style/button_skill.png"
+        button_for_skill.style.cssText = "cursor: pointer;";}
         
     if ((f2p == 1) || (f2p == 2)) {
         while (skillmode[randomChar][randomSkill] == 1) {randomSkill = rando(0, 2);}
