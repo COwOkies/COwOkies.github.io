@@ -1,0 +1,22 @@
+body {
+  background-color: orange;
+  background-image: url('https://c.tenor.com/P-8ZvqnS4AwAAAAM/dancing-cat-dancing-kitten.gif');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#header {
+  color: black;
+  font-family: consolas;
+  font-style: bold;
+  margin: auto;
+  width: 50%;
+  text-align: center;
+}
+
+button {
+  background-color: orange;
+  border: 2px solid rgb(120, 78, 0);
+  border-radius: 5px;
+}
