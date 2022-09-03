@@ -15,7 +15,7 @@ var f2p = false
 
 //detect device
 if (screen.width <= 699) {
-document.location = "short.html";
+document.location = "mobile.html";
 }
 
 //Return and display a random Character
