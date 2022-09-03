@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>Soul Knight Character Selector</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="scripts2.js"></script>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <script src="https://randojs.com/1.0.0.js"></script>
+    </head>
+
+    <body class="dark-mode" onload="getRandomChar();enable_legend();getRandomSkill();toggleprices();">
+        <h1>Soul Knight Character Selector</h1>
+
+        <div class="table">
+            <div class="left">
+                <b class="blocktext">Char</b>
+                <div class="results" id="myCharacter"></div>
+                    <br>
+
+                    <img src="" id="Char_Skin" height="140">
+                    <p class="priceslook" id="char_price">???</p>
+                    <INPUT type="image" src="style/button_char.png" value="" width="180" onclick="getRandomChar()">
+                </div>
+                <div class="right">
+                <b class="blocktext">Skill</b>
+                    <div class="results" id="mySkill"></div>
+
+                        <br>
+                        <img src="" id="Char_Skill" height="140">
+                        <p class="priceslook" id="skill_price">???</p>
+                        <INPUT id="button_for_skill" type="image" src="style/button_skill.png" value="" width="180" onclick="getRandomSkill()">
+                    </div>
+                </div>
+                <INPUT type="image" src="style/button_all.png" value="" width="220" onclick="getRandomChar();getRandomSkill()">
+                
+                <br><br>
+                <div class="toggle_legendaries">
+                    <p id="p_legendary" class="results">add legendary characters</p>
+                 <input id="c_legendary" type="checkbox" checked onclick="enable_legend()">
+                </div>
+                <div class="only_legendaries">
+                    <p id="p_onlylegendary" class="results">only legendary characters</p>
+                    <input id="c_onlylegendary" type="checkbox" onclick="onlylegend()">
+                </div>
+                <div class="showprices">
+                    <p id="p_prices" class="results">show prices</p>
+                    <input id="c_prices" type="checkbox" checked onclick="toggleprices()">
+                </div>
+                <div class="choosef2p">
+                    <p id="p_f2p" class="results">f2p mode‎</p>
+                    <div class="f2palign"></div>
+                        <input id="c_f2p_all" type="checkbox" onclick="enablef2p()">
+                        <label for="All">All</label><br>
+                        <input id="c_f2p_char" type="checkbox" onclick="enablef2p()">
+                        <label for="Char">Char</label><br>
+                        <input id="c_f2p_skill" type="checkbox" onclick="enablef2p()">
+                        <label for="Skill">Skill</label>
+                    </div>
+                </div>
+            </div>
+            <div id="HASH">
+                <p id="version">V.1.2.8</p>
+                <button id="color" onclick="switchMode()">☀️</button>
+            </div>
+        </div>
+    </body>
+</html>
