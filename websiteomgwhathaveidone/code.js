@@ -1,19 +1,8 @@
+function over() {
+  document.getElementById("pfp").src = "discord.png";
+}
 function clicked() {
-  document.getElementById('button1').textContent = 'Button clicked';
+  window.prompt("Copy to clipboard (Ctrl+C) and then close this window", "COwOkie#6114")
 }
-
-function shut() {
-  audio = document.getElementById('audioplayer');
-  textaudio = document.getElementById('button2');
-  if (audio.muted == false) {
-    audio.muted = true;
-    audio.pause();
-    textaudio.textContent = "🔇";
-  }
-  
-  else {
-    audio.play();
-    audio.muted = false;
-    textaudio.textContent = "🔊";
-  }
-}
+function noover() {
+  document.getElementById("pfp").src = "cookie.png";}

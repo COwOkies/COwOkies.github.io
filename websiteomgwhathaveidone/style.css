@@ -1,30 +1,31 @@
 body {
   font-size:20px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)) , url('bg.jpeg');
+  font-family:'Segoe UI';
+  color: white;
+  text-shadow: 2px 2px 0px black;
 }
 
 p {
   font-size:22px;
+  text-shadow: 1px 1px 1px black;
 }
 
 #header {
-  font-family:'Segoe UI';
   font-style: bold;
-  color: white;
-  text-shadow: 2px 2px 0px black;
   margin: auto;
   width: 50%;
   text-align: center;
 }
 
-#gamelist {
-  background-color: rgba(255, 255, 255, 0.705);
-  font-family: consolas;
-  font-style: bold;
-  margin: auto;
-  width: 50%;
-  border-radius: 5px;
+#page {
+    font-style: bold;
+    margin: auto;
+    width: 50%;
+    text-align: center;
 }
+
+
 
 #theheader{
   background-color: rgba(0, 0, 0, 0.426);
@@ -36,19 +37,45 @@ p {
 }
 
 #pfp {
-
   border: 5px solid black;
-  border-radius: 70px;
+  border-radius: 150px;
 }
 
-a {color:inherit;text-decoration: none; color:black;}
+a {color:black;text-decoration: none;text-shadow: none;}
 
 h2 {
   font-size:30px;
 }
 
-#atype { text-decoration: underline;} 
+#atype {color:black; text-decoration: underline;text-shadow: none;} 
 
 #paid {color:red;}
 #f2p {color:rgba(0, 157, 255, 0.956);}
 #free {color:rgb(0, 255, 0);}
+
+#bottomhelp {
+  display: flex;
+  justify-content:space-evenly;
+  margin:  auto;
+  font-size: 15px;
+}
+
+#gamelist {
+  background-color: rgba(255, 255, 255, 0.705);
+  color: black;
+  font-style: bold;
+  margin: auto;
+  width: 50%;
+  border-radius: 5px;
+}
+
+#selected {text-shadow: 3px 3px 0px rgba(255, 145, 0, 0.83);}
+
+/*
+button {
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
+  color: white;
+}
+*/

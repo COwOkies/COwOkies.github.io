@@ -2,22 +2,24 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>COwOkie's website</title>
+    <title>COwOkie's online games</title>
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <script type="text/javascript" src="code.js"></script>
   </head>
   <body>
     <div id="theheader">
       <p> </p>
       <a href="index.html" class="button"><h2>🏠</h2></a>
-      <a href="games.html" class="button"><h2>🎮</h2></a>
+      <a id="selected" href="games.html" class="button"><h2>🎮</h2></a>
+      <a href="projects.html" class="button"><h2>🛠️</h2></a>
     </div>
     <div id="header">
       <h2>Heres the online multiplayer COwOkie own</h2>
     </div>
     <div id="gamelist">
       <ul>
-        <li id="atype">Most Played</li>
+        <li id="atype"><p style="text-shadow: none">Most Played</p></li>
         <ul>
           <li id="f2p"><a href="https://splitgate.com/" target="_blank">Splitgate</a></li>
           <li id="f2p"><a href="http://www.playvalorant.com/" target="_blank">Valorant</a></li>
@@ -26,7 +28,7 @@
           <li id="paid"><a href="https://www.minecraft.net/en-us" target="_blank">Minecraft</a></li>
         </ul>
         <p>
-        <li id="atype">Played</li>
+        <li id="atype"><p style="text-shadow: none">Played</p></li>
         <ul>
           <li id="paid"><a href="https://store.steampowered.com/app/620/Portal_2/" target="_blank">Portal 2</a></li>
           <li id="free"><a href="https://osu.ppy.sh/home/download" target="_blank">Osu</a></li>
@@ -39,7 +41,7 @@
           <li id="f2p"><a href="https://www.ea.com/fr-fr/games/apex-legends" target="_blank">Apex Legends</a></li>
         </ul>
         <p>
-        <li id="atype">Played a few times</li>
+        <li id="atype"><p style="text-shadow: none">Played a few times</p></li>
         <ul>
           <li id="paid"><a href="https://www.l4d.com/blog/" target="_blank">L4D (1&2)</a></li>
           <li id="f2p"><a href="https://www.rocketleague.com/" target="_blank">Rocket League</a></li>
@@ -54,7 +56,7 @@
 
         </ul>
         <p>
-        <li id="atype">Never Played</li>
+        <li id="atype"><p style="text-shadow: none">Never Played</p></li>
         <ul>
           <li id="free"><a href="https://store.steampowered.com/app/1625450/Muck/" target="_blank">Muck</a></li>
           <li id="paid"><a href="https://store.steampowered.com/app/240/CounterStrike_Source/" target="_blank">CS:S</a></li>
@@ -62,10 +64,19 @@
           <li id="f2p"><a href="https://www.teamfortress.com/" target="_blank">TF2</a></li>
         </ul>
         <p>
-        <li id="atype">Don't really like</li>
+        <li id="atype"><p style="text-shadow: none">Don't really like</p></li>
         <ul>
           <li id="f2p"><a href="https://www.epicgames.com/fortnite/en/home" target="_blank">Fortnite</a></li>
           <li id="f2p"><a href="https://www.leagueoflegends.com/en-us/" target="_blank">League Of Legend</a></li>
+        </ul>
+      </ul>
+      <ul>
+        <ul>
+          <div id="bottomhelp">
+            <li id="paid"><a>Paid Games</a></li>
+            <li id="f2p"><a>Free2Play Games</a></li>
+            <li id="free"><a>Free Games</a></li>
+          </div>
         </ul>
       </ul>
     </div>

@@ -4,19 +4,28 @@
     <meta charset="utf-8">
     <title>COwOkie's website</title>
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <script type="text/javascript" src="code.js"></script>
   </head>
   <body>
     <div id="theheader">
       <p> </p>
-      <a href="index.html" class="button"><h2>🏠</h2></a>
+      <a id="selected" href="index.html" class="button"><h2>🏠</h2></a>
       <a href="games.html" class="button"><h2>🎮</h2></a>
+      <a href="projects.html" class="button"><h2>🛠️</h2></a>
     </div>
     <div id="header">
       <h1>Welcome to COwOkie's website!</h1>
-      <img id="pfp" src="cookie.png" alt="COwOkie profile picture" width="150px">
-      <p>here you can get some info about COwOkie!</p>
+      <img id="pfp" src="cookie.png" onclick="clicked()" onmouseover="over()" onmouseleave="noover()" alt="COwOkie profile picture" width="150px">
+      
+      <p>On this website you can get some info about COwOkie!</p>
       <p></p>
+      <h2>Learn to know me :</h2>
+    </div>
+    <div id="page">
+      <p>Hey, I'm a french teenager that speak French/English and try to learn Spanish</p>
+      <p>I like playing games and modding the "fancy pants adventures" games !</p>
+      <p> </p>
     </div>
   </body>
 </html>
