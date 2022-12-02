@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Titre de la page</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+    <h3>Rentre des mots qui ont une sonorité qui fini en O</h3>
+    <p>
+    <p id="text">Mot : </p>
+    <input type="text" id="word" required size="10" onkeydown="if (event.keyCode == 13)  {update()}">
+    <button onclick="update()">Envoyer</button>
+    <p id="score">Score : 0</p>
+    <p id="liste"></p>
+</body>
+</html>
