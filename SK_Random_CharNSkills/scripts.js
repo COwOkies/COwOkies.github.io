@@ -1,15 +1,15 @@
 //characters list
-let characters = ['Knight', 'Rogue', 'Wizard', 'Assassin', 'Alchemist', 'Engineer', 'Vampire', 'Paladin', 'Elf', 'Werewolf', 'Priest', 'Druid', 'Robot', 'Berseker', 'Necromancer', 'Officer', 'Taoist', 'Air Bender', 'Demonmancer', 'Inter-dimension Traveler', 'Element Envoy', 'The Beheaded', 'Time Traveling Ninja','Special Forces'];
-let charprice = ['Free Char','f2p (2000)','f2p (3000)','f2p (4000)','f2p (5000)','Paid ($0.99)','Paid ($0.99)','Paid ($0.99)','f2p (12000)','Paid ($1.99)','f2p (12000)','Paid ($1.99)','f2p (IG Materials)','Paid ($1.99)','Paid ($1.99)','f2p (achievement)','Paid ($1.99)','f2p (achievement)','Paid ($1.99)','Paid (Priest+Necromancer)','f2p (Wizard+Elf)','f2p (IG Materials)','Paid (Assassin+Engineer)','f2p (Officer+Knight)'];
-let charmode = [0,0,0,0,0,1,1,1,0,1,0,1,0,1,1,0,1,0,1,1,0,0,1,0];
+let characters = ['Knight', 'Rogue', 'Wizard', 'Assassin', 'Alchemist', 'Engineer', 'Vampire', 'Paladin', 'Elf', 'Werewolf', 'Priest', 'Druid', 'Robot', 'Berseker', 'Necromancer', 'Officer', 'Taoist', 'Air Bender', 'Demonmancer','Miner','Trap Master', 'Inter-dimension Traveler', 'Element Envoy', 'The Beheaded', 'Time Traveling Ninja','Special Forces'];
+let charprice = ['Free Char','f2p (2000)','f2p (3000)','f2p (4000)','f2p (5000)','Paid ($0.99)','Paid ($0.99)','Paid ($0.99)','f2p (12000)','Paid ($1.99)','f2p (12000)','Paid ($1.99)','f2p (IG Materials)','Paid ($1.99)','Paid ($1.99)','f2p (achievement)','Paid ($1.99)','f2p (achievement)','Paid ($1.99)','f2p (12000)','Paid (1$)','Paid (Priecrest+Nomancer)','f2p (Wizard+Elf)','f2p (IG Materials)','Paid (Assassin+Engineer)','f2p (Officer+Knight)'];
+let charmode = [0,0,0,0,0,1,1,1,0,1,0,1,0,1,1,0,1,0,1,0,1,1,0,0,1,0];
 
 //skills list
-let skillprice =[['Free Skill','f2p (5000)','f2p (6000)'],['Free Skill','Paid ($1.99)','Paid ($1.99)'],['Free Skill','f2p (6000)','Paid ($1.99)'],['Free Skill','f2p (7000)','f2p (7000)'],['Free Skill','f2p (8000)','Paid ($1.99)'],['Free Skill','Paid ($1.99)','Paid ($1.99)'],['Free Skill','Paid ($1.99)','f2p (10000)'],['Free Skill','Paid ($1.99)','f2p (Design Table)'],['Free Skill','Paid ($1.99)','f2p (10000)'],['Free Skill','f2p (12000)','Paid ($1.99)'],['Free Skill','f2p (Design Table)','Paid ($1.99)'],['Free Skill','f2p (Design Table)','f2p (10000)'],['Free Skill','Paid ($1.99)','f2p (8000)'],['Free Skill','Paid ($1.99)','f2p (Design Table)'],['Free Skill','Paid ($1.99)','Paid ($1.99)'],['Free Skill','f2p (8000)','f2p (Design Table)'],['Free Skill','Paid ($1.99)','f2p (10000)'],['Free Skill','Paid ($1.99)'],['Free Skill','f2p (Design Table)'],['Free Skill'],['Free Skill'],['Free Skill'],['Free Skill'],['Free Skill']]
-let skillmode =[[0,0,0],[0,1,1],[0,0,1],[0,0,0],[0,0,1],[0,1,1],[0,1,0],[0,1,0],[0,1,0],[0,0,1],[0,0,1],[0,0,0],[0,1,0],[0,1,0],[0,1,1],[0,0,0],[0,1,0],[0],[0],[0],[0],[0],[0],[0]]
+let skillprice =[['Free Skill','f2p (5000)','f2p (6000)'],['Free Skill','Paid ($1.99)','Paid ($1.99)'],['Free Skill','f2p (6000)','Paid ($1.99)'],['Free Skill','f2p (7000)','f2p (7000)'],['Free Skill','f2p (8000)','Paid ($1.99)'],['Free Skill','Paid ($1.99)','Paid ($1.99)'],['Free Skill','Paid ($1.99)','f2p (10000)'],['Free Skill','Paid ($1.99)','f2p (Design Table)'],['Free Skill','Paid ($1.99)','f2p (10000)'],['Free Skill','f2p (12000)','Paid ($1.99)'],['Free Skill','f2p (Design Table)','Paid ($1.99)'],['Free Skill','f2p (Design Table)','f2p (10000)'],['Free Skill','Paid ($1.99)','f2p (8000)'],['Free Skill','Paid ($1.99)','f2p (Design Table)'],['Free Skill','Paid ($1.99)','Paid ($1.99)'],['Free Skill','f2p (8000)','f2p (Design Table)'],['Free Skill','Paid ($1.99)','f2p (10000)'],['Free Skill','Paid ($1.99)'],['Free Skill','f2p (Design Table)'],['Free Skill'],['Free Skill'],['Free Skill'],['Free Skill'],['Free Skill'],['Free Skill'],['Free Skill']]
+let skillmode =[[0,0,0],[0,1,1],[0,0,1],[0,0,0],[0,0,1],[0,1,1],[0,1,0],[0,1,0],[0,1,0],[0,0,1],[0,0,1],[0,0,0],[0,1,0],[0,1,0],[0,1,1],[0,0,0],[0,1,0],[0],[0,1],[0],[0],[0],[0],[0],[0],[0]]
 
 //setup some important var
 var [randomChar,randomSkill,color] = [1,1,1]
-var [minvalue,maxvalue] = [0,18]
+var [minvalue,maxvalue] = [0,20]
 var path = (".png")
 var f2p = false
 
@@ -22,7 +22,7 @@ document.location = "mobile.html";
 function getRandomChar(){
     old_randomChar = randomChar
     while (randomChar == old_randomChar) {randomChar = rando(minvalue, maxvalue);}
-    if (randomChar > 18) {
+    if (randomChar > 20) {
         randomSkill = 0
         button_for_skill = document.getElementById("button_for_skill")
         button_for_skill.src="style/button_skill_x.png"
@@ -37,7 +37,7 @@ function getRandomChar(){
         while (skillmode[randomChar][randomSkill] == 1) {randomSkill = rando(0, 2);}
         while (charmode[randomChar] == 1) {randomChar = rando(minvalue, maxvalue);}}
     
-    if (randomChar == 23) {path = (".gif")}
+    if (randomChar == 25) {path = (".gif")}
     else {path = (".png")}
     updateAll()
 }
@@ -45,7 +45,7 @@ function getRandomChar(){
 //Return and display a random Skill
 function getRandomSkill(){
     old_randomSkill = randomSkill
-    if (randomChar > 18) {randomSkill = 0}
+    if (randomChar > 20) {randomSkill = 0}
     else {
         let skillvalue = 2
         if (randomChar > 16) {skillvalue = 1}
@@ -87,10 +87,10 @@ function switchMode() {
 function enable_legend() {
     if (document.querySelector('#c_legendary').checked) {
         document.querySelector('.only_legendaries').style.visibility = "visible";
-        maxvalue = 23;}
+        maxvalue = 25;}
 
     else {
-        [maxvalue,minvalue] = [18,0];
+        [maxvalue,minvalue] = [20,0];
         document.querySelector('.only_legendaries').style.visibility = "hidden";
         document.querySelector('#c_onlylegendary').checked = false;
 
@@ -100,7 +100,7 @@ function enable_legend() {
 //enable/disable the other characters (than legendary)
 function onlylegend() {
     if (document.querySelector('#c_onlylegendary').checked) {
-        minvalue = 19;
+        minvalue = 21;
         getRandomChar()}
 
     else {minvalue = 0;}
