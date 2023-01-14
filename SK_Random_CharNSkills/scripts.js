@@ -51,6 +51,7 @@ function getRandomSkill(){
         let skillvalue = 2
         if (randomChar > 16) {skillvalue = 1}
         randomSkill = rando(0, skillvalue);
+        if (randomChar > 18 < 21) {randomSkill = 0);
         while (randomSkill == old_randomSkill) {
             randomSkill = rando(0, skillvalue); }}
 
