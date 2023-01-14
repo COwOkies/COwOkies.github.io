@@ -32,6 +32,7 @@ function getRandomChar(){
         
 
     if (randomChar == 17 || randomChar == 18) {randomSkill = rando(0, 1)}
+    if (randomChar == 19 || randomChar == 20) {randomSkill = 0}
 
     if ((f2p == 1) || (f2p == 2)) {
         while (skillmode[randomChar][randomSkill] == 1) {randomSkill = rando(0, 2);}
