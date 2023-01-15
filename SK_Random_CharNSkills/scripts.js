@@ -1,10 +1,14 @@
+function rando(min, max) { // min and max included 
+    return Math.floor(Math.random() * (max - min + 1) + min)
+  }
+
 //characters list
 let characters = ['Knight', 'Rogue', 'Wizard', 'Assassin', 'Alchemist', 'Engineer', 'Vampire', 'Paladin', 'Elf', 'Werewolf', 'Priest', 'Druid', 'Robot', 'Berseker', 'Necromancer', 'Officer', 'Taoist', 'Air Bender', 'Demonmancer','Miner','Trap Master', 'Inter-dimension Traveler', 'Element Envoy', 'The Beheaded', 'Time Traveling Ninja','Special Forces'];
-let charprice = ['Free Char','f2p (2000)','f2p (3000)','f2p (4000)','f2p (5000)','Paid ($0.99)','Paid ($0.99)','Paid ($0.99)','f2p (12000)','Paid ($1.99)','f2p (12000)','Paid ($1.99)','f2p (IG Materials)','Paid ($1.99)','Paid ($1.99)','f2p (achievement)','Paid ($1.99)','f2p (achievement)','Paid ($1.99)','f2p (12000)','Paid (1$)','Paid (Priecrest+Nomancer)','f2p (Wizard+Elf)','f2p (IG Materials)','Paid (Assassin+Engineer)','f2p (Officer+Knight)'];
+let charprice = ['Free Char','F2P (2000)','F2P (3000)','F2P (4000)','F2P (5000)','Paid ($0.99)','Paid ($0.99)','Paid ($0.99)','F2P (12000)','Paid ($1.99)','F2P (12000)','Paid ($1.99)','F2P (IG Materials)','Paid ($1.99)','Paid ($1.99)','F2P (achievement)','Paid ($1.99)','F2P (achievement)','Paid ($1.99)','F2P (12000)','Paid (1$)','Paid (Priecrest+Nomancer)','F2P (Wizard+Elf)','F2P (IG Materials)','Paid (Assassin+Engineer)','F2P (Officer+Knight)'];
 let charmode = [0,0,0,0,0,1,1,1,0,1,0,1,0,1,1,0,1,0,1,0,1,1,0,0,1,0];
 
 //skills list
-let skillprice =[['Free Skill','f2p (5000)','f2p (6000)'],['Free Skill','Paid ($1.99)','Paid ($1.99)'],['Free Skill','f2p (6000)','Paid ($1.99)'],['Free Skill','f2p (7000)','f2p (7000)'],['Free Skill','f2p (8000)','Paid ($1.99)'],['Free Skill','Paid ($1.99)','Paid ($1.99)'],['Free Skill','Paid ($1.99)','f2p (10000)'],['Free Skill','Paid ($1.99)','f2p (Design Table)'],['Free Skill','Paid ($1.99)','f2p (10000)'],['Free Skill','f2p (12000)','Paid ($1.99)'],['Free Skill','f2p (Design Table)','Paid ($1.99)'],['Free Skill','f2p (Design Table)','f2p (10000)'],['Free Skill','Paid ($1.99)','f2p (8000)'],['Free Skill','Paid ($1.99)','f2p (Design Table)'],['Free Skill','Paid ($1.99)','Paid ($1.99)'],['Free Skill','f2p (8000)','f2p (Design Table)'],['Free Skill','Paid ($1.99)','f2p (10000)'],['Free Skill','Paid ($1.99)'],['Free Skill','f2p (Design Table)'],['Free Skill'],['Free Skill'],['Free Skill'],['Free Skill'],['Free Skill'],['Free Skill'],['Free Skill']]
+let skillprice =[['Base Skill','F2P (5000)','F2P (6000)'],['Base Skill','Paid ($1.99)','Paid ($1.99)'],['Base Skill','F2P (6000)','Paid ($1.99)'],['Base Skill','F2P (7000)','F2P (7000)'],['Base Skill','F2P (8000)','Paid ($1.99)'],['Base Skill','Paid ($1.99)','Paid ($1.99)'],['Base Skill','Paid ($1.99)','F2P (10000)'],['Base Skill','Paid ($1.99)','F2P (Design Table)'],['Base Skill','Paid ($1.99)','F2P (10000)'],['Base Skill','F2P (12000)','Paid ($1.99)'],['Base Skill','F2P (Design Table)','Paid ($1.99)'],['Base Skill','F2P (Design Table)','F2P (10000)'],['Base Skill','Paid ($1.99)','F2P (8000)'],['Base Skill','Paid ($1.99)','F2P (Design Table)'],['Base Skill','Paid ($1.99)','Paid ($1.99)'],['Base Skill','F2P (8000)','F2P (Design Table)'],['Base Skill','Paid ($1.99)','F2P (10000)'],['Base Skill','Paid ($1.99)'],['Base Skill','F2P (Design Table)'],['Base Skill'],['Base Skill'],['Base Skill'],['Base Skill'],['Base Skill'],['Base Skill'],['Base Skill']]
 let skillmode =[[0,0,0],[0,1,1],[0,0,1],[0,0,0],[0,0,1],[0,1,1],[0,1,0],[0,1,0],[0,1,0],[0,0,1],[0,0,1],[0,0,0],[0,1,0],[0,1,0],[0,1,1],[0,0,0],[0,1,0],[0],[0,1],[0],[0],[0],[0],[0],[0],[0]]
 
 //setup some important var
@@ -14,15 +18,15 @@ var path = (".png")
 var f2p = false
 
 //detect device
-if (screen.width <= 699) {
-document.location = "mobile.html";
-}
+if (screen.width <= 699) {document.location = "mobile.html";}
+else {document.location = "index.html";}
+
 
 //Return and display a random Character
 function getRandomChar(){
     old_randomChar = randomChar
     while (randomChar == old_randomChar) {randomChar = rando(minvalue, maxvalue);}
-    if (randomChar > 20) {
+    if (randomChar > 18) {
         randomSkill = 0
         button_for_skill = document.getElementById("button_for_skill")
         button_for_skill.src="style/button_skill_x.png"
@@ -46,12 +50,11 @@ function getRandomChar(){
 //Return and display a random Skill
 function getRandomSkill(){
     old_randomSkill = randomSkill
-    if (randomChar > 20) {randomSkill = 0}
+    if (randomChar > 18) {randomSkill = 0}
     else {
         let skillvalue = 2
         if (randomChar == 17 || randomChar == 18) {skillvalue = 1}
         randomSkill = rando(0, skillvalue);
-        if (randomChar == 19 || randomChar == 20) {randomSkill = 0};
         while (randomSkill == old_randomSkill) {
             randomSkill = rando(0, skillvalue); }}
 

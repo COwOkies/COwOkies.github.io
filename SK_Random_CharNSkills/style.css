@@ -24,6 +24,15 @@ body {
 
 h1 {
     border: 2px solid rgb(255, 255, 255);
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(18, 18, 18);
+    border-radius: 8px;
+    margin: auto;
+    width: 20%;}
+
+h2 {
+    border: 2px solid rgb(255, 255, 255);
     font-size: 50px;
     color: rgb(255, 255, 255);
     background-color: rgb(18, 18, 18);
@@ -94,3 +103,7 @@ input {cursor:pointer;}
     justify-content: space-between;}
 
 label{font-family: 'lockclock';font-size: 20px;}
+
+img{border-spacing: 10px;
+border-radius: 8px;
+border: 1px solid gray;}
