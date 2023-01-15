@@ -2,7 +2,21 @@ function rando(min, max) { // min and max included
     return Math.floor(Math.random() * (max - min + 1) + min)
   }
 
+function search() { 
+    name = document.getElementById('charname').value.toLowerCase();
+    if (lowchar.indexOf(name) >= 0) {randomChar = lowchar.indexOf(name);
+    updateAll()}
+    else {randomChar = "-1";
+    randomSkill = 1;
+    getImages();
+    document.getElementById("myCharacter").innerHTML = "???";
+    document.getElementById("char_price").innerHTML = "???";
+    document.getElementById("skill_price").innerHTML = "???";
+    document.getElementById("mySkill").innerHTML = "???";}
+  }
+
 //characters list
+let lowchar = ['knight', 'rogue', 'wizard', 'assassin', 'alchemist', 'engineer', 'vampire', 'paladin', 'elf', 'werewolf', 'priest', 'druid', 'robot', 'berseker', 'necromancer', 'officer', 'taoist', 'air bender', 'demonmancer', 'miner', 'trap master', 'inter-dimension traveler', 'element envoy', 'the beheaded', 'time traveling ninja', 'special forces']
 let characters = ['Knight', 'Rogue', 'Wizard', 'Assassin', 'Alchemist', 'Engineer', 'Vampire', 'Paladin', 'Elf', 'Werewolf', 'Priest', 'Druid', 'Robot', 'Berseker', 'Necromancer', 'Officer', 'Taoist', 'Air Bender', 'Demonmancer','Miner','Trap Master', 'Inter-dimension Traveler', 'Element Envoy', 'The Beheaded', 'Time Traveling Ninja','Special Forces'];
 let charprice = ['Free Char','F2P (2000)','F2P (3000)','F2P (4000)','F2P (5000)','Paid ($0.99)','Paid ($0.99)','Paid ($0.99)','F2P (12000)','Paid ($1.99)','F2P (12000)','Paid ($1.99)','F2P (IG Materials)','Paid ($1.99)','Paid ($1.99)','F2P (achievement)','Paid ($1.99)','F2P (achievement)','Paid ($1.99)','F2P (12000)','Paid (1$)','Paid (Priecrest+Nomancer)','F2P (Wizard+Elf)','F2P (IG Materials)','Paid (Assassin+Engineer)','F2P (Officer+Knight)'];
 let charmode = [0,0,0,0,0,1,1,1,0,1,0,1,0,1,1,0,1,0,1,0,1,1,0,0,1,0];
