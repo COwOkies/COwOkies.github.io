@@ -5,6 +5,8 @@ function rando(min, max) { // min and max included
 function search() { 
     name = document.getElementById('charname').value.toLowerCase();
     if (lowchar.indexOf(name) >= 0) {randomChar = lowchar.indexOf(name);
+    getRandomSkill();
+    checkButton();
     updateAll()}
     else {randomChar = "-1";
     randomSkill = 1;
@@ -39,16 +41,8 @@ viewport.setAttribute('content', 'width=device-width, initial-scale=1.0');
 //Return and display a random Character
 function getRandomChar(){
     old_randomChar = randomChar
-    while (randomChar == old_randomChar) {randomChar = rando(minvalue, maxvalue);}
-    if (randomChar > 18) {
-        randomSkill = 0
-        button_for_skill = document.getElementById("button_for_skill")
-        button_for_skill.src="style/button_skill_x.png"
-        button_for_skill.style.cssText = "cursor: not-allowed;";}
-    else {button_for_skill.src="style/button_skill.png"
-        button_for_skill.style.cssText = "cursor: pointer;";}
-        
-
+    while (randomChar == old_randomChar) {randomChar = rando(minvalue, maxvalue);}    
+    checkButton()
     if (randomChar == 17 || randomChar == 18) {randomSkill = rando(0, 1)}
     if (randomChar == 19 || randomChar == 20) {randomSkill = 0}
 
@@ -59,6 +53,16 @@ function getRandomChar(){
     if (randomChar == 25) {path = (".gif")}
     else {path = (".png")}
     updateAll()
+}
+
+function checkButton(){
+    if (randomChar > 18) {
+        randomSkill = 0
+        button_for_skill = document.getElementById("button_for_skill")
+        button_for_skill.src="style/button_skill_x.png"
+        button_for_skill.style.cssText = "cursor: not-allowed;";}
+    else {button_for_skill.src="style/button_skill.png"
+        button_for_skill.style.cssText = "cursor: pointer;";}
 }
 
 //Return and display a random Skill

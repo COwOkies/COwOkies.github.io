@@ -57,11 +57,12 @@
                 </div>
                 <label for="name">Name (3 to 24 characters):</label>
 
-                    <input type="text" id="charname" name="name" required
-                minlength="4" maxlength="8" size="10" onkeydown="if (event.keyCode == 13) {search()}">
+                    <input title="'Knight', 'Rogue', 'Wizard', 'Assassin', 'Alchemist', 'Engineer', 'Vampire', 'Paladin', 'Elf', 'Werewolf', 'Priest', 'Druid', 'Robot', 'Berseker', 'Necromancer', 'Officer', 'Taoist', 'Air Bender', 'Demonmancer','Miner','Trap Master', 'Inter-dimension Traveler', 'Element Envoy', 'The Beheaded', 'Time Traveling Ninja','Special Forces'" 
+                    type="text" id="charname" name="name" required
+                minlength="3" maxlength="24" size="10" onkeydown="if (event.keyCode == 13 || event.keyCode == 9) {search()}">
             </div>
             <div id="HASH">
-                <a id="version" href="changelog.html">V.1.3.3</a>
+                <a id="version" href="changelog.html">V.1.3.4</a>
                 <button id="color" onclick="switchMode()">☀️</button>
             </div>
         </div>
