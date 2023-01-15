@@ -18,8 +18,8 @@ var path = (".png")
 var f2p = false
 
 //detect device
-if (screen.width <= 699) {document.location = "mobile.html";}
-else {document.location = "index.html";}
+if (screen.width <= 699 && document.location != "mobile.html") {document.location = "mobile.html";}
+else if (screen.width >= 700 && document.location != "index.html"){document.location = "index.html";}
 
 
 //Return and display a random Character
