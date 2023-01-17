@@ -8,4 +8,4 @@ function over() {
 }
 
 function noover() {
-  document.getElementById("pfp").src = "cookie.png";}
+  document.getElementById("pfp").src = "https://cdn.discordapp.com/avatars/404323229419962381/d27eaa3ba723d2e004330fa45c34f0a4.webp?size=512.png";}
