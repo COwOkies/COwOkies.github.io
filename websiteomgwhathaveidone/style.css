@@ -36,15 +36,14 @@ body {
     text-align: center;}
 
 /*a underlined*/
-#atype {color:black; text-decoration: underline;text-shadow: none;} 
+#atype {color:rgb(0, 0, 0); text-decoration: underline;text-shadow: none;} 
 
 /*the gamelist*/
 #gamelist {
-  background-color: rgba(255, 255, 255, 0.705);
+  background-color: rgba(255, 255, 255, 0.30);
   color: black;
   font-style: bold;
   margin: auto;
-  width: 50%;
   border-radius: 5px;}
 
 #paid {color:red;}
@@ -58,7 +57,7 @@ body {
   font-size: 15px;}
 
 /*extra config*/
-p {font-size:22px;text-shadow: 1px 1px 1px black;}
-a {color:black;text-decoration: none;text-shadow: none;}
+p {font-size:22px;text-shadow: 1px 1px 0px black;}
+a {color:rgb(255, 255, 255);text-decoration: none;text-shadow: none;}
 h2 {font-size:30px;}
 #normal {color: white;text-shadow: 1px 1px 0px black;}
