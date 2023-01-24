@@ -58,6 +58,6 @@ body {
 
 /*extra config*/
 p {font-size:22px;text-shadow: 1px 1px 0px black;}
-a {color:rgb(255, 255, 255);text-decoration: none;text-shadow: none;}
+a {color:black;text-decoration: none;text-shadow: none;}
 h2 {font-size:30px;}
 #normal {color: white;text-shadow: 1px 1px 0px black;}
