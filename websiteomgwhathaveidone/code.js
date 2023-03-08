@@ -16,7 +16,7 @@ function loadHeader() {
       return response.text()
     })
     .then(data => {
-      document.querySelector("#theheader").innerHTML = data;
+      document.querySelector("#bartest").innerHTML = data;
     });
 }
 
