@@ -36,7 +36,7 @@ body {
     text-align: center;}
 
 /*a underlined*/
-#atype {color:rgb(0, 0, 0); text-decoration: underline;text-shadow: none;} 
+#atype {color:white; text-decoration: underline;text-shadow: none;} 
 
 /*the gamelist*/
 #gamelist {
