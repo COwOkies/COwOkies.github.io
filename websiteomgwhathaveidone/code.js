@@ -10,11 +10,14 @@ function over() {
 function noover() {
   document.getElementById("pfp").src = "pdp.png";}
 
-fetch("header.html")
-.then(response => {
-  return response.text()
-})
-.then(data => {
-  // On insère le contenu du fichier html de header dans la page
-  document.querySelector("theheader").innerHTML = data;
-});
+function loadHeader() {
+  fetch("header.html")
+    .then(response => {
+      return response.text()
+    })
+    .then(data => {
+      document.querySelector("theheader").innerHTML = data;
+    });
+}
+
+window.addEventListener("DOMContentLoaded", loadHeader);
