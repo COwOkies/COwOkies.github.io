@@ -18,8 +18,12 @@ function loadHeader() {
     .then(data => {
       document.querySelector("#bar").innerHTML = data;
     });
-    let name = window.location.pathname.split("/")[window.location.pathname.split("/").length - 1];
-    document.querySelector(`.button[href='${CSS.escape(name)}']`).setAttribute("id", "selected");
+}
+
+function loadSelected() {
+  let name = window.location.pathname.split("/")[window.location.pathname.split("/").length - 1];
+  document.querySelector(`.button[href='${CSS.escape(name)}']`).setAttribute("id", "selected");
 }
 
 window.addEventListener("DOMContentLoaded", loadHeader);
+window.addEventListener("DOMContentLoaded", loadSelected);
