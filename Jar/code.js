@@ -20,10 +20,7 @@ function loadHeader() {
     });
 }
 
-function loadSelected() {
-  let name = window.location.pathname.split("/")[window.location.pathname.split("/").length - 1];
-  document.querySelector(`.button[href='${CSS.escape(name)}']`).setAttribute("id", "selected");
-}
-
 window.addEventListener("DOMContentLoaded", loadHeader);
-window.addEventListener("DOMContentLoaded", loadSelected);
+
+let name = window.location.pathname.split("/")[window.location.pathname.split("/").length - 1];
+  document.querySelector(`.button[href='${CSS.escape(name)}']`).setAttribute("id", "selected");
