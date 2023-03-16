@@ -21,6 +21,3 @@ function loadHeader() {
 }
 
 window.addEventListener("DOMContentLoaded", loadHeader);
-
-let name = window.location.pathname.split("/")[window.location.pathname.split("/").length - 1];
-  document.querySelector(`.button[href='${CSS.escape(name)}']`).setAttribute("id", "selected");
