@@ -3,4 +3,8 @@
       <a href="projects" class="button"><h2>🛠️</h2></a>
       <a href="games" class="button"><h2>🎮</h2></a>
       <a id="right" href="links" class="button"><h2>🔗</h2></a>
-    </div>
+</div>
+<script>
+      let name = window.location.pathname.split("/")[window.location.pathname.split("/").length - 1];
+      document.querySelector(`.button[href='${CSS.escape(name)}']`).setAttribute("id", "selected");
+</script>
