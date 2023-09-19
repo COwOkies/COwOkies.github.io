@@ -1,5 +1,5 @@
 function clicked() {
-  navigator.clipboard.writeText("COwOkie#6114");
+  navigator.clipboard.writeText("cowokie_");
   alert("COwOkies discord copied to clipboard");
 }
 
@@ -8,16 +8,4 @@ function over() {
 }
 
 function noover() {
-  document.getElementById("pfp").src = "pdp.png";}
-
-function loadHeader() {
-  fetch("header.html")
-    .then(response => {
-      return response.text()
-    })
-    .then(data => {
-      document.querySelector("#bar").innerHTML = data;
-    });
-}
-
-window.addEventListener("DOMContentLoaded", loadHeader);
+  document.getElementById("pfp").src = "https://cdn.discordapp.com/avatars/404323229419962381/122b1724edaa6981d4e8f342eb0d87b5.webp?size=512";}
