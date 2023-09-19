@@ -4,7 +4,7 @@
 
 body {
   font-size:25px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)) , url('bg.jpeg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)) , url('bg.jpeg');
   font-family:'Segoe UI';
   color: white;
   text-shadow: 2px 2px 0px black;}
@@ -18,7 +18,7 @@ body {
   justify-content:start;
   margin:  auto;}
 
-#right {display: block;margin-left: auto;}
+#right {display:block;margin-left: auto;}
 #selected {text-shadow: 3px 3px 0px rgba(255, 145, 0, 0.83);}
 
 /*Intro of pages (titles)*/
@@ -58,6 +58,10 @@ body {
 
 /*extra config*/
 p {font-size:22px;text-shadow: 1px 1px 0px black;}
-a {color:rgb(255, 255, 255);text-decoration: none;text-shadow: none;}
+a {color:rgb(255, 221, 0);text-decoration: none;text-shadow: 2px 2px 0px black;}
 h2 {font-size:30px;}
-#normal {color: white;text-shadow: 1px 1px 0px black;}
+#normal {color: white;text-shadow: 12px 1px 0px black;}
+#color{
+  font-size: 30px;
+  background-color: transparent;    
+  border: 0px solid transparent;}
