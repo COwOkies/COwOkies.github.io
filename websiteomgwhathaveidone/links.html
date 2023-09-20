@@ -11,31 +11,41 @@
 
   <body>
     <!-- top bar setup -->
-    <div id="theheader">
+    <header>
       <a href="index.html" class="button" style="margin-left: 20px;"><h2>🏠</h2></a>
       <a href="projects.html" class="button"><h2>🛠️</h2></a>
       <a target="_blank" href="https://www.backloggd.com/u/COwOkie/" class="button"><h2>🎮</h2></a>
       <table id="right"><tr>
-        <td><button onclick="changeLanguage('fre')" id="color">🇫🇷</button></td>
-        <td><button onclick="changeLanguage('eng')" id="color">🇬🇧</button></td>
-        <td><a href="links.html" class="button" id="selected"><h2>🔗</h2></a></td>
-      </table> </tr>
-    </div>
+        <td><button onclick="changeLanguage('fr')" id="frbutton" class="color">🇫🇷</button></td>
+        <td><button onclick="changeLanguage('en')" id="enbutton" class="color">🇬🇧</button></td>
+        <td><a id="selected" href="links.html" class="button"><h2>🔗</h2></a></td></tr>
+      </table>
+    </header>
 
     <!-- title+intro -->
-    <div id="header">
+    <div id="Infotitle">
       <h2 class="en">Links</h2>
       <h2 class="fr">Liens</h2>
     </div>
 
     <!-- waiting -->
     <div id="page">
-      <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/4/4f/Discord_Logo_sans_texte.svg/1818px-Discord_Logo_sans_texte.svg.png" onclick="clicked()" width="100px">
-      <p>
-      <a target="_blank" id="normal" href="https://www.youtube.com/channel/UCyi91oP99kCD7XtPg88JQRw/"><img src="https://denkavit.com/en/wp-content/uploads/sites/8/2021/11/YouTube-Icon.png"  width="100px"></a>
-      <p>
-      <a target="_blank" id="normal" href="https://github.com/COwOkies"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png"  width="100px"></a>
+      <figure onclick="clicked()" >
+        <img src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a69f118df70ad7828d4_icon_clyde_blurple_RGB.svg" width="160px">
+        <figcaption>Discord</figcaption>
+      </figure>
+      <a target="_blank" id="normal" href="https://www.youtube.com/channel/UCyi91oP99kCD7XtPg88JQRw/">
+        <figure>
+          <img src="https://denkavit.com/en/wp-content/uploads/sites/8/2021/11/YouTube-Icon.png"  width="160px">
+          <figcaption>Youtube</figcaption>
+        </figure>
+      </a>
+      <a target="_blank" id="normal" href="https://github.com/COwOkies">
+        <figure>
+          <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png"  width="160px">
+          <figcaption>Github</figcaption>
+        </figure>
+     </a>
     </div>
-
   </body>
 </html>
