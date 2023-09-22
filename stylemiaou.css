@@ -1,0 +1,53 @@
+::selection {
+  color:rgb(45, 45, 45);
+  background-color: rgb(255, 130, 213);}
+
+body {
+  font-size:25px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)) , url('https://static.vecteezy.com/system/resources/previews/005/298/805/non_2x/seamless-pattern-of-cute-cartoon-cat-illustration-design-on-pink-background-free-vector.jpg');
+  font-family: 'Comic Sans MS', cursive;
+  color: #ffd1e5;
+  text-shadow: 2px 2px 0px black;}
+
+
+/*Intro of pages (titles)*/
+#header {
+  font-style: bold;
+  margin: auto;
+  width: 50%;
+  text-align: center;}
+
+/*the page*/
+#page {
+    font-style: bold;
+    margin: auto;
+    width: 50%;
+    text-align: center;}
+
+/*a underlined*/
+#atype {color:black; text-decoration: underline;text-shadow: none;} 
+
+/*the gamelist*/
+#gamelist {
+  background-color: rgba(255, 255, 255, 0.705);
+  color: black;
+  font-style: bold;
+  margin: auto;
+  width: 50%;
+  border-radius: 5px;}
+
+#paid {color:red;}
+#f2p {color:rgba(0, 157, 255, 0.956);}
+#free {color:rgb(0, 255, 0);}
+
+#bottomhelp {
+  display: flex;
+  justify-content:space-evenly;
+  margin:  auto;
+  font-size: 15px;}
+
+/*extra config*/
+p {font-size:22px;text-shadow: 1px 1px 1px black;}
+a {color:black;text-decoration: none;text-shadow: none;}
+h2 {font-size:30px;}
+#normal {color: white;text-shadow: 1px 1px 0px black;}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>COwOkie's website</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="cookicon.png">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="code.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  </head>
+
+  <body>
+    <!-- top bar setup -->
+    <header>  
+      <a id="selected" href="index.html" class="button" style="margin-left: 20px;"><h2>🏠</h2></a>
+      <a href="projects.html" class="button"><h2>🛠️</h2></a>
+      <a target="_blank" href="https://www.backloggd.com/u/COwOkie/" class="button"><h2>🎮</h2></a>
+      <table id="right"><tr>
+        <td><button onclick="changeLanguage('fr')" id="frbutton" class="color">🇬🇧</button></td>
+        <td><button onclick="changeLanguage('en')" id="enbutton" class="color">🇫🇷</button></td>
+        <td><a href="links.html" class="button"><h2>🔗</h2></a></td></tr>
+      </table>
+    </header>
+
+    <!-- title+intro -->
+    <div id="Infotitle">
+      <h1 class="en">Welcome to COwOkie's Website!</h1>
+      <h1 class="fr">Bienvenue sur le site de COwOkie!</h1>
+
+      <p class="en">On this website you can get some informations about COwOkie!</p>
+      <p class="fr">Sur ce site vous trouverez des informations à propos de COwOkie!</p>
+      <img id="pfp" src="pfp.webp" onclick="clicked()" onmouseover="over()" onmouseleave="noover()" width="150px" height="150px" style="background-color:orange;border: 3px solid black;border-radius: 150px;">
+      <h2 class="en">Learn to know me :</h2>
+      <h2 class="fr">Apprenez à me connaitre : </h2>
+    </div>
+
+    <!-- the infos -->
+    <div id="page">
+      <p class="en">Hey, I'm a French guy that speak La Baguette & English.</p>
+      <p class="fr">Salut, je suis un Humain Français qui parle le Français & Le Rosbif.</p>
+
+      <p class="en">I like cats, cookies, <a href="projects">playing/modding video games, programming</a> and generally speaking, discovering new things!</p>
+      <p class="fr">J'aime les chats, les cookies, <a href="projects">jouer/modder des jeux vidéos, programmer</a> et en général, découvrir de nouvelles choses!</p>
+
+      <p class="en">I like <a target="_blank" href="https://music.youtube.com/playlist?list=PLc_gVv3MomXZemHk83ZI-wiQgz6jId2aW&si=qFh8LPvAmy1D8iUW">tons of different types of music</a> that go from Jazz to Metal and everything in between!🎵</p>
+      <p class="fr">J'aime <a target="_blank" href="https://music.youtube.com/playlist?list=PLc_gVv3MomXZemHk83ZI-wiQgz6jId2aW&si=qFh8LPvAmy1D8iUW">pleins de différents styles de musiques</a> qui vont du Jazz jusqu'au Métal, en incluant tout ce qu'il y a au milieu!🎵</p>
+    </div>
+  </body>
+</html>
