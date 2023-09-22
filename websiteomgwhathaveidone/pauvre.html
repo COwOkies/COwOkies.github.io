@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>COwOkie's website</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="cookicon.png">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="code.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  </head>
+
+  <body>
+    <!-- top bar setup -->
+    <header>  
+      <a href="index.html" class="button" style="margin-left: 20px;"><h2>🏠</h2></a>
+      <a id="selected" href="pauvre.html" class="button"><h2>💀</h2></a>
+      <table id="right"><tr>
+        <td><button onclick="changeLanguage('fr')" id="frbutton" class="color">🇬🇧</button></td>
+        <td><button onclick="changeLanguage('en')" id="enbutton" class="color">🇫🇷</button></td>
+        <td><a href="links.html" class="button"><h2>🔗</h2></a></td></tr>
+      </table>
+    </header>
+
+    <!-- title+intro -->
+    <div id="Infotitle">
+      <h1 class="fr">Formation pour devenir pauvre</h1>
+    </div>
+
+    <!-- the infos -->
+    <div id="p1">
+      <p class="fr">Félicitations pour avoir choisi de plonger dans le monde de la pauvreté avec style ! Avec notre formation, vous apprendrez à dépenser votre argent de manière à devenir pauvre.</p>
+      <p class="en">Congratulations on choosing to dive into the world of poverty with style! With our training, you will learn how to spend your money in a way that makes you poor.</p>
+
+      <p class="fr">Afin de commencer une nouvelle vie, veuillez rentrez la somme d'argent dont vous disposez actuellement sur votre compte en banque :</p>
+      <p class="en">To start a new life, please enter the amount of money you currently have in your bank account:</p>
+
+      <input type="number" id="montant" name="montant" min="0" step="any" value="0">
+      
+      <p class="fr" id="montantAffiche">Montant saisi: <span class="valeurMontant">0</span>€</p>
+      <p class="en" id="montantAffiche">Amount entered: <span class="valeurMontant">0</span>$</p>
+      
+      <button class="fr" onclick="next()">Continuer</button>
+      <button class="en" onclick="next()">Continue</button>
+    </div>
+    <div style="display:none" id="p2">
+      <p class="fr">Bravo, vous avez bien rentré le montant indiqué ! Une équipe d'experts a minutieusement analysé votre budget, et nous avons le plaisir de vous informer que votre situation financière est tout à fait propice à notre formation pour devenir pauvre sur mesure.</p>
+      <p class="en">Congratulations, you have entered the specified amount correctly! A team of experts has meticulously analyzed your budget, and we are pleased to inform you that your financial situation is entirely conducive to our custom-made poverty training.</p>
+      <p class="fr">Avec le montant que vous avez spécifié, voici votre formation personnalisée pour devenir pauvre :</p>
+      <p class="en">With the amount you have specified, here is your personalized training to become poor:</p>
+    
+      <h2 class="fr">Une formation à <span class="valeurMontant">0</span>€ seulement !</h2>
+      <h2 class="en">A training for only <span class="valeurMontant">0</span>$!</h2>
+      <p class="fr">Grâce à cette simple formation, vous allez enfin goûter à la joie de la pauvreté !</p>
+      <p class="en">Thanks to this simple training, you will finally get to taste the joy of poverty!</p>
+    </div>
+      
+
+
+
+    <script>
+      const inputMontant = document.getElementById("montant");
+      const valeurMontant = document.querySelectorAll(".valeurMontant");
+
+      function ajouterEspaces(montant) {
+          return montant.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+      }
+
+      function next(){
+        document.getElementById("p1").style.display = 'none';
+        document.getElementById("p2").style.display = 'block';
+      }
+      inputMontant.addEventListener("input", function() {
+          const montantSaisi = inputMontant.value;
+
+          const montantAvecEspaces = ajouterEspaces(montantSaisi);
+
+          valeurMontant.forEach(function (element) {
+      element.textContent = montantAvecEspaces;
+    });
+            
+      });
+  </script>
+  </body>
+</html>

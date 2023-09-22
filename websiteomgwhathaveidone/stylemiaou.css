@@ -1,3 +1,10 @@
+/*top bar with links to other pages*/
+header{
+  background-color: rgba(0, 0, 0, 0.426);
+  border-radius: 10px;
+  display: flex;
+  letter-spacing: 20px;}
+
 ::selection {
   color:rgb(45, 45, 45);
   background-color: rgb(255, 130, 213);}
@@ -9,13 +16,12 @@ body {
   color: #ffd1e5;
   text-shadow: 2px 2px 0px black;}
 
-
-/*Intro of pages (titles)*/
-#header {
-  font-style: bold;
-  margin: auto;
-  width: 50%;
-  text-align: center;}
+#right {display:block;margin-left: auto;}
+#selected {text-shadow: 3px 3px 0px rgb(255 74 194);}
+  .color{
+  font-size: 30px;
+  background-color: transparent;    
+  border: 0px solid transparent;}
 
 /*the page*/
 #page {

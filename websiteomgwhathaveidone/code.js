@@ -14,7 +14,7 @@ function over() {
 }
 
 function noover() {
-  document.getElementById("pfp").src = "https://cdn.discordapp.com/avatars/404323229419962381/122b1724edaa6981d4e8f342eb0d87b5.webp?size=512";}
+  document.getElementById("pfp").src = "pfp.webp";}
 
 function changeLanguage(lang) {
   
@@ -57,11 +57,8 @@ function loadSelectedLanguage() {
     changeLanguage(selectedLanguage);
   }
   else {
-    if (navigator.language == 'fr' || navigator.language == 'en')
-    {localStorage.setItem('selectedLanguage', navigator.language);}
-    else {localStorage.setItem('selectedLanguage', 'en');}
-  
-    loadSelectedLanguage()
+    localStorage.setItem('selectedLanguage', 'en');
+    loadSelectedLanguage();
   }
 }
 

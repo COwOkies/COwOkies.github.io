@@ -23,7 +23,6 @@ header{
 #Infotitle {
   font-style: bold;
   margin: auto;
-  width: 50%;
   text-align: center;}
 
 /*the page*/
@@ -65,4 +64,24 @@ figure {
   cursor: pointer;
 }
 
-tr:nth-child(odd) > .test {background-color: rgba(255, 255, 255, 0.282); border-radius:20px}
+tr:nth-child(odd) > .tablestyle {background-color: rgba(255, 255, 255, 0.282); border-radius:20px}
+
+img:not(#pfp){width:150px;}
+
+@media (max-width: 768px) {
+  #projects {
+    width: 100%; /* Make it take up the full width of the screen */
+    display: flex;
+    flex-direction: column;
+  }
+
+  img:not(#pfp){
+    width:50%;
+    height:50%;
+  }
+  
+  h1,h2{font-size:90%;}
+  p{font-size:80%;}
+}
+
+button{color:black;}
