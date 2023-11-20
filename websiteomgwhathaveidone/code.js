@@ -21,14 +21,22 @@ function changeLanguage(lang) {
     if (lang == 'en'){
       document.getElementById("frbutton").style.display = 'block';
       document.getElementById("enbutton").style.display = 'none';
+      document.getElementById("tobutton").style.display = 'none';
     }
-    else {
+    if (lang == 'fr'){
+      document.getElementById("frbutton").style.display = 'none';
+      document.getElementById("enbutton").style.display = 'none';
+      document.getElementById("tobutton").style.display = 'block';
+    }
+    if (lang == 'to'){
       document.getElementById("frbutton").style.display = 'none';
       document.getElementById("enbutton").style.display = 'block';
+      document.getElementById("tobutton").style.display = 'none';
     }
     
     const elementsEn = document.querySelectorAll('.en');
     const elementsFr = document.querySelectorAll('.fr');
+    const elementsTo = document.querySelectorAll('.to');
   
     elementsEn.forEach(function (element) {
       element.style.display = 'none';
@@ -37,12 +45,22 @@ function changeLanguage(lang) {
     elementsFr.forEach(function (element) {
       element.style.display = 'none';
     });
+
+    elementsTo.forEach(function (element) {
+      element.style.display = 'none';
+    });
   
     if (lang === 'en') {
       elementsEn.forEach(function (element) {
         element.style.display = 'block';
       });
-    } else if (lang === 'fr') {
+    }
+    else if (lang === 'to') {
+      elementsTo.forEach(function (element) {
+        element.style.display = 'block';
+      });
+    }
+    else if (lang === 'fr') {
       elementsFr.forEach(function (element) {
         element.style.display = 'block';
       });
